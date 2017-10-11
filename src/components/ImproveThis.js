@@ -9,17 +9,23 @@ class ImproveThis extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			fullname: props.first_name + ' '+ props.last_name
+			fullname: ''
 		};
 	}
 	
 	componentDidMount() {}
 
-	componentWillReceiveProps(nextProps) {}
+	componentWillReceiveProps(nextProps) {
+		if (nextProps.first_name && nextProps.last_name) {
+			this.setState({
+				fullname: nextProps.first_name + ' ' + nextProps.last_name
+			});
+		}
+	}
 
 	render() {
 		return (
-			<span>{{ this.state.fullname }}</span>
+			<span>{ this.state.fullname }</span>
 		);
 	}
 }

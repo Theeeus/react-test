@@ -19,6 +19,8 @@ class Test3 extends Component {
 		this.state = {
 			counter: 0
 		};
+		// Alternative solution:
+		//this.incrementCounter = this.incrementCounter.bind(this); 
 	}
 
 	incrementCounter() {
@@ -34,7 +36,7 @@ class Test3 extends Component {
 				<input
 					type="button"
 					value="Click here"
-					onClick={this.incrementCounter}
+					onClick={() => this.incrementCounter()}
 				/>
 			</div>
 		);

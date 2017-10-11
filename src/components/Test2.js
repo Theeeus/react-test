@@ -18,7 +18,16 @@ class Test2 extends Component {
 			{
 				method: "GET"
 			}
-		).then(respsonse => response.results);
+		)
+		.then(response => response.json())
+		.then((json) => {
+			var fetched = json.results.map((result) => {
+				return result.formatted_address;
+			});
+			this.setState({
+				fetched: fetched
+			})
+		});
 	}
 
 	render() {
@@ -26,7 +35,12 @@ class Test2 extends Component {
 			border: "1px solid black",
 			padding: "10px"
 		};
-		return <div style={style}>This is another Test </div>;
+		return (
+			<div>
+				<div style={style}>This is another Test </div>
+				<div>{this.state.fetched}</div>
+			</div>
+		);
 	}
 }
 
