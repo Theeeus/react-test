@@ -6,7 +6,7 @@ There is a warning in the console : "vendors.dll.js:384 Warning: Accessing PropT
 
 
 ## Initial Step
-Fork this repository into your own github account. Then proceed to Steps 2,3&4 into your own copy.
+Copy the code of this repository into a new repo (Don't fork, otherwise your solutions will be public)
 
 ## Step 1 - Run the project
 `npm install`
@@ -38,6 +38,6 @@ Improve this component.
 
 ## Step3 - Notify us
 Push your code.    
-Make a pull request.
+Notify us with the adress of your repo
 
 Good luck :-)
